@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://wavynode.com/api/v1/wallets/">
+        <link rel="canonical" href="https://wavynode.com/api/v1/chains/">
       
       
-        <link rel="prev" href="../chains/">
+        <link rel="prev" href="../../">
       
+      
+        <link rel="next" href="../wallets/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Wallets - Wavy Node</title>
+        <title>Chains - Wavy Node</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wallets" class="md-skip">
+        <a href="#chains" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wallets
+              Chains
             
           </span>
         </div>
@@ -363,27 +365,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../chains/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Chains
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -400,7 +381,7 @@
           
   
   <span class="md-ellipsis">
-    Wallets
+    Chains
   </span>
   
 
@@ -411,7 +392,7 @@
         
   
   <span class="md-ellipsis">
-    Wallets
+    Chains
   </span>
   
 
@@ -433,27 +414,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#estado" class="md-nav__link">
+  <a href="#todas-las-cadenas" class="md-nav__link">
     <span class="md-ellipsis">
-      Estado
+      Todas las cadenas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reporte" class="md-nav__link">
+  <a href="#una-cadena" class="md-nav__link">
     <span class="md-ellipsis">
-      Reporte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Balance
+      Una cadena
     </span>
   </a>
   
@@ -463,6 +435,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wallets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wallets
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -510,27 +503,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#estado" class="md-nav__link">
+  <a href="#todas-las-cadenas" class="md-nav__link">
     <span class="md-ellipsis">
-      Estado
+      Todas las cadenas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reporte" class="md-nav__link">
+  <a href="#una-cadena" class="md-nav__link">
     <span class="md-ellipsis">
-      Reporte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Balance
+      Una cadena
     </span>
   </a>
   
@@ -554,20 +538,15 @@
   
 
 
-<h1 id="wallets">Wallets</h1>
-<p>La <code>wallets</code> API le permite a los desarrolladores obtener información acerca de wallets específicas, obtener su estado y balance.</p>
-<h2 id="estado">Estado</h2>
+<h1 id="chains">Chains</h1>
+<p>Presenta información acerca de las diferentes cadenas compatibles con Wavy Node.</p>
+<h2 id="todas-las-cadenas">Todas las cadenas</h2>
 <ul>
-<li><strong>Descripción</strong>: Obtiene el estado de una determinada <code>{wallet}</code>.</li>
-<li><strong>Endpoint</strong>: <code>/v1/wallets/{wallet}/status</code></li>
+<li><strong>Descripción</strong>: Obtiene todas las cadenas compatibles con Wavy Node. </li>
+<li><strong>Endpoint</strong>: <code>/v1/chains</code></li>
 <li><strong>Método</strong>: GET</li>
 <li><strong>Request:</strong><ul>
-<li><strong>Route params:</strong><ul>
-<li><code>wallet</code> (requerido): La dirección EVM a consultar</li>
-</ul>
-</li>
 <li><strong>Query params:</strong><ul>
-<li><code>chainId</code> (requerido): La chain sobre la cual hacer la consulta.</li>
 <li><code>apiKey</code> (requerido): Tu API key</li>
 </ul>
 </li>
@@ -577,29 +556,27 @@
 <li><strong>Body:</strong> (JSON)
     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dirty&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="s2">&quot;tornado&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p">],</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&quot;lastTxs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&quot;lastDapps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42161</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arbitrum&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;rpc_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://arb1.arbitrum.io/rpc&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;explorer_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://arbiscan.io&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;currency_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ETH&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="nt">&quot;currency_decimals&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </code></pre></div></li>
 </ul>
 </li>
 </ul>
-<h2 id="reporte">Reporte</h2>
+<h2 id="una-cadena">Una cadena</h2>
 <ul>
-<li><strong>Descripción</strong>: Genera un reporte redactado acerca del estado de una determinada <code>{wallet}</code> usando IA.</li>
-<li><strong>Endpoint</strong>: <code>/v1/wallets/{wallet}/report</code></li>
+<li><strong>Descripción</strong>: Obtiene información de una cadena en específico</li>
+<li><strong>Endpoint</strong>: <code>/v1/chains/{chainId}</code></li>
 <li><strong>Método</strong>: GET</li>
 <li><strong>Request:</strong><ul>
-<li><strong>Route params:</strong><ul>
-<li><code>wallet</code> (requerido): La dirección EVM a consultar</li>
-</ul>
-</li>
 <li><strong>Query params:</strong><ul>
 <li><code>apiKey</code> (requerido): Tu API key</li>
 </ul>
@@ -610,38 +587,19 @@
 <li><strong>Body:</strong> (JSON)
     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(El reporte generado por IA en markdown)&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<h2 id="balance">Balance</h2>
-<ul>
-<li><strong>Descripción</strong>: Obtiene el balance total de la <code>{wallet}</code>.</li>
-<li><strong>Endpoint</strong>: <code>/v1/wallets/{wallet}/balance</code></li>
-<li><strong>Método</strong>: GET</li>
-<li><strong>Request:</strong><ul>
-<li><strong>Route params:</strong><ul>
-<li><code>wallet</code> (requerido): La dirección EVM a consultar</li>
-</ul>
-</li>
-<li><strong>Query params:</strong><ul>
-<li><code>chainId</code> (requerido): La chain sobre la cual hacer la consulta.</li>
-<li><code>apiKey</code> (requerido): Tu API key</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Response:</strong><ul>
-<li><strong>Body:</strong> (JSON)
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="nt">&quot;total_balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="c1">// in usd</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="nt">&quot;assets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arbitrum&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;chain_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42161</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;currency_symbol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ETH&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;market_cap&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;329663113187.488651200&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&quot;coin_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2735.25&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&quot;coin_image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://coin-images.coingecko.com/coins/images/279/small/ethereum.png?1696501628&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;total_addresses&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;67136720&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">&quot;total_blocks&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;302652520&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&quot;total_transactions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1292967936&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">&quot;tvl&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </code></pre></div></li>
 </ul>
 </li>
